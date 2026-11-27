@@ -1,0 +1,7 @@
+# AI Agent Operating Rules
+- Always read `memory/SPEC.md`, `memory/DECISIONS.md`, and `memory/PROGRESS.md` before writing or modifying any code.
+- Never violate the locked stack in `memory/DECISIONS.md` (no Next.js, no Dexie/IndexedDB, no heavy bundled ML models).
+- Keep every React component modular and under 250 lines.
+- Always write database calls through a clean abstraction layer (`src/lib/database.ts`) so native Capacitor SQLite runs on Android and fallback web storage runs on browser preview.
+- NEVER run terminal commands (`npm run dev`, `npm run build`, `npx`, or `git`) or open the browser unless I explicitly ask you to. Only create/edit files and update `memory/PROGRESS.md` when finished—I will run terminal commands myself.
+- After completing any feature or bugfix, update `memory/PROGRESS.md` with completed tasks, modified files, and the exact next task so another IDE agent can resume seamlessly.

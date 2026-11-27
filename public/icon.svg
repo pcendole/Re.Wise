@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E1B4B"/>
+    </linearGradient>
+
+    <!-- Brain Spark Neon Gradient -->
+    <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Glowing Accent -->
+    <linearGradient id="accentGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#F43F5E"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- App Squircle Background -->
+  <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGrad)" stroke="#4F46E5" stroke-width="6" stroke-opacity="0.4"/>
+
+  <!-- Subtle Radial Glow behind emblem -->
+  <circle cx="256" cy="256" r="180" fill="#6366F1" opacity="0.15" filter="url(#neonGlow)"/>
+
+  <!-- Active Recall Spark / Lightning Nodes -->
+  <g filter="url(#neonGlow)">
+    <!-- Central Synapse Core -->
+    <path d="M256 120 L276 210 L350 210 L290 260 L315 340 L256 290 L197 340 L222 260 L162 210 L236 210 Z"
+          fill="url(#sparkGrad)" opacity="0.95"/>
+
+    <!-- Left Brain Hemisphere Arch -->
+    <path d="M190 170 C140 170 110 200 110 250 C110 280 125 305 150 320 C145 345 160 375 190 380 C215 385 240 370 248 350"
+          fill="none" stroke="url(#sparkGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Right Brain Hemisphere Arch -->
+    <path d="M322 170 C372 170 402 200 402 250 C402 280 387 305 362 320 C367 345 352 375 322 380 C297 385 272 370 264 350"
+          fill="none" stroke="url(#sparkGrad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Neural Network Node Dots -->
+    <circle cx="110" cy="250" r="14" fill="#38BDF8"/>
+    <circle cx="402" cy="250" r="14" fill="#C084FC"/>
+    <circle cx="190" cy="380" r="14" fill="#818CF8"/>
+    <circle cx="322" cy="380" r="14" fill="#F43F5E"/>
+    <circle cx="256" cy="120" r="12" fill="#38BDF8"/>
+  </g>
+</svg>

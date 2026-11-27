@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Re.Wise</string>
+    <string name="title_activity_main">Re.Wise</string>
+    <string name="package_name">com.rewise.app</string>
+    <string name="custom_url_scheme">com.rewise.app</string>
+</resources>
